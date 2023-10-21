@@ -1,26 +1,24 @@
-"""
-Test goes here
-
-"""
-
-from main import add, subtract, multiply, divide
+import unittest
+from main import encrypt, decrypt
 
 
-def test_add():
-    assert add(1, 2) == 3
+class TestCaesarCipher(unittest.TestCase):
 
-def test_subtract():
-    assert subtract(1, 2) == -1
+    def test_encrypt(self):
+        self.assertEqual(encrypt("hello", 3), "khoor")
+        self.assertEqual(encrypt("world", 1), "xpsme")
+        self.assertEqual(encrypt("python", 13), "clguba")
 
-def test_multiply():
-    assert multiply(1, 2) == 2
+    def test_decrypt(self):
+        self.assertEqual(decrypt("khoor", 3), "hello")
+        self.assertEqual(decrypt("xpsme", 1), "world")
+        self.assertEqual(decrypt("clguba", 13), "python")
 
-def test_divide():
-    assert divide(2, 1) == 2
+    def test_encrypt_decrypt(self):
+        plaintext = "the quick brown fox jumps over the lazy dog"
+        shift = 5
+        self.assertEqual(decrypt(encrypt(plaintext, shift), shift), plaintext)
+
 
 if __name__ == "__main__":
-    test_add()
-    test_subtract()
-    test_multiply()
-    test_divide()
-    print("Everything passed")
+    unittest.main()

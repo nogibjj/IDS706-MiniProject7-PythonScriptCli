@@ -1,52 +1,36 @@
 [![CI](https://github.com/nogibjj/python-template/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/python-template/actions/workflows/cicd.yml)
 
-# Template for IDS706 weekly mini-projects 
+# Rewrite a Python Script in Rust
 
 ## Goal
 
-> Duke University IDS 706 Weekly Mini Project 1
+> Duke University IDS 706 Weekly Mini Project 8
 
-This is a repo template for duke course IDS706 Data Engineering Mini Project (Fall 2023). It contains:
-
-`.devcontainer` includes a Dockerfile and devcontainer.json. The 'Dockerfile' within this folder specifies how the container should be built, and other settings in this directory may control development environment configurations.
-
-`workflows` includes GitHub Actions, which contain configuration files for setting up automated build, test, and deployment pipelines for your project.
-
-`.gitignore` is used to specify which files or directories should be excluded from version control when using Git.
-
-`Makefile` is a configuration file used in Unix-based systems for automating tasks and building software. It contains instructions and dependencies for compiling code, running tests, and other development tasks.
-
-`requirements.txt` is to specify the Python package dependencies (libraries and packages).
-
-`test_main.py` is a test file for main.py that can successfully run in IDEs.
-
-`Github Actions` to run the Makefile as follows: make install, make test, make format, make lint.
+- Take an existing Python script for data processing
+- Rewrite it in Rust
+- Highlight improvements in speed and resource usage
 
 
+## Explanation
 
+Since I have already done the Rust Script in mini project 7, therefore, I implemented the Python script in this project.
+Then I compare the performance between Python and Rust.
 
 ## Preparation
 
-1. Open in the Github codespaces
-2. Do simple test in the terminal
+For the Rust script, please refer to [here](https://github.com/nogibjj/IDS706-MiniProject7-RustScriptCli)
 
-## Run and Result
+As for the Python script, just use this script.
 
-This section is saved for later mini projects.
-🌰 Example in the Github Codespace 
-
-make format
-
-![Make Formate Img](image.png)
+`python main.py "Your Plaintext" shift`
 
 
-make lint
+## Performance comparison report
 
-![Lint Test](image-1.png)
+For the comparison, I use the same plaintext and shift number to test the performance.
 
-make test
 
-![Test Result](image-2.png)
+
 
 ## Reference
 
