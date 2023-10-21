@@ -27,9 +27,38 @@ As for the Python script, just use this script.
 
 ## Performance Comparison Report
 
+### Methodology
+
 For the comparison, I use the same plaintext and shift number to test the performance.
 
-Meanwhile, I write a script to run the same script 1000 times and 10000 times to get the total elapsed time and resource usage.
+To test single time and resource usage, I use the `time` command in bash.
+
+```bash
+time python main.py "Hello World" 3
+```
+
+```bash
+time cargo run "Hello World" 3
+```
+
+As for running time performance, I run the single script 1000 times and 10000 times to get the total elapsed time via a `run_comparison.sh` script.
+
+where contains the following code:
+```bash
+for i in {1..1000}; do python main.py "Hello World" 3; done
+```
+
+```bash
+for i in {1..1000}; do cargo run "Hello World" 3; done
+```
+
+Now you can run the script to compare the total time it takes to execute both the Python and Rust programs N times:
+
+`./run_comparison.sh`
+
+### Result
+
+Here is the result:
 
 |Language|      Run Script 1000 Times       |       Run Script 10000 Times        | Average Resource Usage                                                                                     |
 |:---:|:--------------------------------:|:-----------------------------------:|:-----------------------------------------------------------------------------------------------------------|
