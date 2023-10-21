@@ -20,9 +20,11 @@ Then I compare the performance between Python and Rust.
 
 For the Rust script, please refer to [here](https://github.com/nogibjj/IDS706-MiniProject7-RustScriptCli)
 
-As for the Python script, just use this script.
-
-`python main.py "Your Plaintext" shift`
+1. Clone the both project to your local machine.
+2. Install Rust and Python.
+3. Install the dependencies for both projects.
+4. Run the Python script and Rust script  separately to see the result.
+5. Run the `run_comparison.sh` separately to see the performance comparison.
 
 
 ## Performance Comparison Report
